@@ -112,7 +112,7 @@ namespace TricksterTools.Plugins.UIEditor
                 this.frm.Activate();
                 return;
             }
-            this.frm = new UIEditorMainForm();
+            this.frm = new UIEditor_ChatUI();
             this.frm.Show();
         }
 
@@ -156,7 +156,7 @@ namespace TricksterTools.Plugins.UIEditor
         public static void Main(String[] args)
         {
             UIEditor cls = new UIEditor();
-            frm = new UIEditorMainForm();
+            frm = new UIEditor_ChatUI();
             cls.Run();
             //cls.HookRun(HookPoint.UpdatedGame);
         }

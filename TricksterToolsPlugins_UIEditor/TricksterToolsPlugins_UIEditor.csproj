@@ -61,11 +61,11 @@
     <Compile Include="UIEdit.cs" />
     <Compile Include="UIEditor.cs" />
     <Compile Include="UIEditorConfig.cs" />
-    <Compile Include="UIEditorMainForm.cs">
+    <Compile Include="UIEditor_ChatUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UIEditorMainForm.Designer.cs">
-      <DependentUpon>UIEditorMainForm.cs</DependentUpon>
+    <Compile Include="UIEditor_ChatUI.Designer.cs">
+      <DependentUpon>UIEditor_ChatUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -75,9 +75,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UIEditorMainForm.resx">
+    <EmbeddedResource Include="UIEditor_ChatUI.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>UIEditorMainForm.cs</DependentUpon>
+      <DependentUpon>UIEditor_ChatUI.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
