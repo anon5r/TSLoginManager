@@ -612,7 +612,12 @@ namespace TricksterTools
                     {
                         SimpleLogger.WriteLine("Exception!!: " + e.GetType().FullName);
                         SimpleLogger.WriteLine(e.Message);
-                        MessageBox.Show("アップデートの実行には管理者権限が必要です。\n処理を中断します。", "TSLoginManager", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        //MessageBox.Show("アップデートの実行には管理者権限が必要です。\n処理を中断します。", "TSLoginManager", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        DialogResult result = MessageBox.Show("アップデートの実行には管理者権限が必要です。\nTSLoginManagerを管理者権限で再起動しますか。", "TSLoginManager", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        if (result == DialogResult.Yes)
+                        {
+                            Common.RestartApplicationAtAdministratorAuthority();
+                        }
                     }
                 }
 
@@ -628,7 +633,7 @@ namespace TricksterTools
                 }
 
                 /// <summary>
-                /// 
+                /// 管理者権限でアプリケーションを実行し直します
                 /// </summary>
                 public static void RestartApplicationAtAdministratorAuthority()
                 {
